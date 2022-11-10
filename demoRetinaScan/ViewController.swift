@@ -9,12 +9,14 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     @IBOutlet weak var objectView: UIImageView!
     @IBOutlet weak var modeController: UISegmentedControl!
     @IBOutlet weak var uiViewBackground: UIView!
     @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var distanceLabel: UILabel! //displays the distance in cm
+    @IBOutlet weak var approxDistText: UILabel! // just label
     
     var faceNode = SCNNode()
     var leftEye = SCNNode()
@@ -74,12 +76,47 @@ class ViewController: UIViewController {
             {
             case 0:
                 sceneView.isHidden = true
+                distanceLabel.isHidden = true
+                approxDistText.isHidden = true
             case 1:
                 sceneView.isHidden = false
+                distanceLabel.isHidden = false
+                approxDistText.isHidden = false
             default:
                 break
             }
     }
+    
+    @IBAction func chooseImage(_ sender: Any) {
+        let imgPickerCtrl = UIImagePickerController()
+        imgPickerCtrl.delegate = self
+        let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: .actionSheet)
+            actionSheet.addAction(UIAlertAction(title: "camera", style: .default, handler: { (actions: UIAlertAction) in
+                if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                        imgPickerCtrl.sourceType = .camera
+                        self.present(imgPickerCtrl, animated: true, completion: nil)
+                }
+                else {
+                    print("Camera is not available!")
+                }
+            }))
+                actionSheet.addAction(UIAlertAction(title: "photo library", style: .default, handler: { (actions: UIAlertAction) in imgPickerCtrl.sourceType = .photoLibrary
+                    self.present(imgPickerCtrl, animated: true, completion: nil)
+                }))
+                actionSheet.addAction(UIAlertAction(title: "never mind", style: .cancel, handler: nil))
+                self.present(actionSheet, animated:true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+            objectView.image = image
+            picker.dismiss(animated:true, completion: nil)
+        }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true, completion: nil)
+        }
+    
     
 
 }
