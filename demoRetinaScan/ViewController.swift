@@ -21,9 +21,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     var faceNode = SCNNode()
     var leftEye = SCNNode()
     var rightEye = SCNNode()
+
     
     var width: CGFloat!
     var height: CGFloat!
+
+    var averageDistanceCM = 30.0
+
 
     //-----------------------
     // MARK: - View LifeCycle
