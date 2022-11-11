@@ -16,6 +16,8 @@
 		E22DA29E2914D0DF004FD3E9 /* demoRetinaScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA29D2914D0DF004FD3E9 /* demoRetinaScanTests.swift */; };
 		E22DA2A82914D0DF004FD3E9 /* demoRetinaScanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA2A72914D0DF004FD3E9 /* demoRetinaScanUITests.swift */; };
 		E22DA2AA2914D0DF004FD3E9 /* demoRetinaScanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA2A92914D0DF004FD3E9 /* demoRetinaScanUITestsLaunchTests.swift */; };
+		E22DA2B72914D115004FD3E9 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA2B62914D115004FD3E9 /* Utility.swift */; };
+		E22DA2B92914D1CE004FD3E9 /* ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA2B82914D1CE004FD3E9 /* ARSCNViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E22DA2A32914D0DF004FD3E9 /* demoRetinaScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demoRetinaScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22DA2A72914D0DF004FD3E9 /* demoRetinaScanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoRetinaScanUITests.swift; sourceTree = "<group>"; };
 		E22DA2A92914D0DF004FD3E9 /* demoRetinaScanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoRetinaScanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E22DA2B62914D115004FD3E9 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		E22DA2B82914D1CE004FD3E9 /* ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSCNViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				E22DA2862914D0DE004FD3E9 /* AppDelegate.swift */,
 				E22DA2882914D0DE004FD3E9 /* SceneDelegate.swift */,
 				E22DA28A2914D0DE004FD3E9 /* ViewController.swift */,
+				E22DA2B62914D115004FD3E9 /* Utility.swift */,
+				E22DA2B82914D1CE004FD3E9 /* ARSCNViewDelegate.swift */,
 				E22DA28C2914D0DE004FD3E9 /* Main.storyboard */,
 				E22DA28F2914D0DF004FD3E9 /* Assets.xcassets */,
 				E22DA2912914D0DF004FD3E9 /* LaunchScreen.storyboard */,
@@ -258,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22DA2B72914D115004FD3E9 /* Utility.swift in Sources */,
 				E22DA28B2914D0DE004FD3E9 /* ViewController.swift in Sources */,
 				E22DA2872914D0DE004FD3E9 /* AppDelegate.swift in Sources */,
 				E22DA2892914D0DE004FD3E9 /* SceneDelegate.swift in Sources */,
+				E22DA2B92914D1CE004FD3E9 /* ARSCNViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +453,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +482,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
