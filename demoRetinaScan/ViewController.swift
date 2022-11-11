@@ -21,6 +21,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     var faceNode = SCNNode()
     var leftEye = SCNNode()
     var rightEye = SCNNode()
+    
+    var width: CGFloat!
+    var height: CGFloat!
 
     //-----------------------
     // MARK: - View LifeCycle
@@ -40,6 +43,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
 
         
         setupEyeNode()
+        
+        setupSize()
+        
+        addGesture()
     }
 
     override func viewWillAppear(_ animated: Bool) { super.viewWillAppear(animated)
@@ -70,6 +77,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         rightEye = node.clone()
     }
     
+    func setupSize() {
+        width = objectView.frame.width
+        height = objectView.frame.height
+    }
+    
+    private func addGesture() {
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(didPinch(_:)))
+        objectView.isUserInteractionEnabled = true
+        objectView.addGestureRecognizer(pinchGesture)
+    }
+    
+    @objc private func didPinch(_ gesture:UIPinchGestureRecognizer) {
+        print("pinch recognized")
+        if gesture.state == .changed {
+            let scale = gesture.scale
+            objectView.frame = CGRect(x: 0, y: 0, width: width * scale, height: height * scale)
+            objectView.center = view.center
+        }
+    }
 
     @IBAction func modeChanged(_ sender: Any) {
         switch modeController.selectedSegmentIndex
@@ -110,6 +136,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
             objectView.image = image
+            setupSize()
             picker.dismiss(animated:true, completion: nil)
         }
         
