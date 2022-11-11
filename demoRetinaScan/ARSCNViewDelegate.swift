@@ -15,6 +15,7 @@ import ARKit
 //--------------------------
 
 extension ViewController: ARSCNViewDelegate{
+   
 
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
 
@@ -26,7 +27,7 @@ extension ViewController: ARSCNViewDelegate{
 
         
         trackDistance()
-//        setObjectSize()
+        setObjectSize()
     }
 
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
@@ -47,7 +48,7 @@ extension ViewController: ARSCNViewDelegate{
 
         
         trackDistance()
-//        setObjectSize()
+        setObjectSize()
     }
 
     func addObject() {
@@ -67,7 +68,7 @@ extension ViewController: ARSCNViewDelegate{
     // Tracks the distance of the eyes from the camera
     func trackDistance(){
 
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [self] in
 
             // Get the distance the eyes from the camera
             let leftEyeDistanceFromCamera = self.leftEye.worldPosition - SCNVector3Zero
@@ -75,7 +76,7 @@ extension ViewController: ARSCNViewDelegate{
 
             // Calculate the average distance
             let averageDistance = (leftEyeDistanceFromCamera.length() + rightEyeDistanceFromCamera.length()) / 2
-            let averageDistanceCM = (Int(round(averageDistance * 100)))
+            self.self.averageDistanceCM = Double((round(averageDistance * 100)))
             print("Approximate distance from the camera = \(averageDistanceCM)")
             let distanceInStr = String(averageDistanceCM) + "cm"
             self.distanceLabel.text = distanceInStr
@@ -84,9 +85,10 @@ extension ViewController: ARSCNViewDelegate{
     
     func setObjectSize() {
         DispatchQueue.main.async {
-            let newWidth = self.objectView.frame.width + 1
-            let newHeight = self.objectView.frame.height + 1
-            
+            let newWidth = 260*CGFloat(self.averageDistanceCM/50.0)
+            let newHeight = 260*CGFloat(self.averageDistanceCM/50.0)
+            print("height = \(newHeight)")
+            print("width = \(newWidth)")
             self.objectView.frame = CGRectMake (self.objectView.frame.origin.x, self.objectView.frame.origin.y, newWidth, newHeight)
         }
     }
