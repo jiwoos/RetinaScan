@@ -15,7 +15,6 @@ import ARKit
 //--------------------------
 
 extension ViewController: ARSCNViewDelegate{
-   
 
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
 
@@ -46,9 +45,10 @@ extension ViewController: ARSCNViewDelegate{
         leftEye.simdTransform = faceAnchor.leftEyeTransform
         rightEye.simdTransform = faceAnchor.rightEyeTransform
 
-        
-        trackDistance()
-        setObjectSize()
+        if (!isPinching) {
+            trackDistance()
+            setObjectSize()
+        }
     }
 
     func addObject() {
@@ -65,11 +65,11 @@ extension ViewController: ARSCNViewDelegate{
         }
        
     }
+    
     // Tracks the distance of the eyes from the camera
     func trackDistance(){
 
         DispatchQueue.main.async { [self] in
-
             // Get the distance the eyes from the camera
             let leftEyeDistanceFromCamera = self.leftEye.worldPosition - SCNVector3Zero
             let rightEyeDistanceFromCamera = self.rightEye.worldPosition - SCNVector3Zero
@@ -80,16 +80,22 @@ extension ViewController: ARSCNViewDelegate{
             print("Approximate distance from the camera = \(averageDistanceCM)")
             let distanceInStr = String(averageDistanceCM) + "cm"
             self.distanceLabel.text = distanceInStr
+            
+            if (!self.setUpDefault) {
+                self.initDistance = averageDistanceCM
+                self.setUpDefault = true
+            }
         }
     }
     
     func setObjectSize() {
         DispatchQueue.main.async {
-            let newWidth = 260*CGFloat(self.averageDistanceCM/50.0)
-            let newHeight = 260*CGFloat(self.averageDistanceCM/50.0)
+            let newWidth = (self.width)*CGFloat(self.averageDistanceCM/self.initDistance)
+            let newHeight = (self.height)*CGFloat(self.averageDistanceCM/self.initDistance)
             print("height = \(newHeight)")
             print("width = \(newWidth)")
-            self.objectView.frame = CGRectMake (self.objectView.frame.origin.x, self.objectView.frame.origin.y, newWidth, newHeight)
+            self.objectView.frame = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
+            self.objectView.center = self.view.center
         }
     }
     

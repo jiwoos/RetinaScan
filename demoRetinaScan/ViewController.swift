@@ -27,6 +27,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     var height: CGFloat!
 
     var averageDistanceCM = 30.0
+    var isPinching = false
+    var setUpDefault = false
+    var initDistance = 50.0
 
 
     //-----------------------
@@ -93,11 +96,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
     
     @objc private func didPinch(_ gesture:UIPinchGestureRecognizer) {
-        print("pinch recognized")
         if gesture.state == .changed {
             let scale = gesture.scale
             objectView.frame = CGRect(x: 0, y: 0, width: width * scale, height: height * scale)
             objectView.center = view.center
+            isPinching = true
+            setUpDefault = false
+        }
+        else if gesture.state == .ended {
+            setupSize()
+            isPinching = false
+            print("pinch ended")
         }
     }
 
