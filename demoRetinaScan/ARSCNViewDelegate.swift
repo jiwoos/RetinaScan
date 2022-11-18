@@ -76,10 +76,9 @@ extension ViewController: ARSCNViewDelegate{
 
             // Calculate the average distance
             let averageDistance = (leftEyeDistanceFromCamera.length() + rightEyeDistanceFromCamera.length()) / 2
-            self.self.averageDistanceCM = Double((round(averageDistance * 100)))
-            print("Approximate distance from the camera = \(averageDistanceCM)")
-            let distanceInStr = String(averageDistanceCM) + "cm"
-            self.distanceLabel.text = distanceInStr
+            self.self.averageDistanceCM = Double((round(averageDistance * 1000)))
+            print("Approximate distance from the camera = \(averageDistanceCM/10)")
+            self.distanceLabel.text = String(averageDistanceCM/10) + "mm"
             
             if (!self.setUpDefault) {
                 self.initDistance = averageDistanceCM
