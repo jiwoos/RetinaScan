@@ -1,13 +1,13 @@
 //
-//  demoRetinaScanUITestsLaunchTests.swift
-//  demoRetinaScanUITests
+//  RetinaScanUITestsLaunchTests.swift
+//  RetinaScanUITests
 //
 //  Created by Jiwoo Seo on 11/3/22.
 //
 
 import XCTest
 
-final class demoRetinaScanUITestsLaunchTests: XCTestCase {
+final class RetinaScanUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

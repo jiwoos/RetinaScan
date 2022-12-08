@@ -13,9 +13,9 @@
 		E22DA28E2914D0DE004FD3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22DA28C2914D0DE004FD3E9 /* Main.storyboard */; };
 		E22DA2902914D0DF004FD3E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22DA28F2914D0DF004FD3E9 /* Assets.xcassets */; };
 		E22DA2932914D0DF004FD3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22DA2912914D0DF004FD3E9 /* LaunchScreen.storyboard */; };
-		E22DA29E2914D0DF004FD3E9 /* demoRetinaScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA29D2914D0DF004FD3E9 /* demoRetinaScanTests.swift */; };
-		E22DA2A82914D0DF004FD3E9 /* demoRetinaScanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA2A72914D0DF004FD3E9 /* demoRetinaScanUITests.swift */; };
-		E22DA2AA2914D0DF004FD3E9 /* demoRetinaScanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA2A92914D0DF004FD3E9 /* demoRetinaScanUITestsLaunchTests.swift */; };
+		E22DA29E2914D0DF004FD3E9 /* RetinaScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA29D2914D0DF004FD3E9 /* RetinaScanTests.swift */; };
+		E22DA2A82914D0DF004FD3E9 /* RetinaScanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA2A72914D0DF004FD3E9 /* RetinaScanUITests.swift */; };
+		E22DA2AA2914D0DF004FD3E9 /* RetinaScanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA2A92914D0DF004FD3E9 /* RetinaScanUITestsLaunchTests.swift */; };
 		E22DA2B72914D115004FD3E9 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA2B62914D115004FD3E9 /* Utility.swift */; };
 		E22DA2B92914D1CE004FD3E9 /* ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DA2B82914D1CE004FD3E9 /* ARSCNViewDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E22DA2832914D0DE004FD3E9 /* demoRetinaScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoRetinaScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E22DA2832914D0DE004FD3E9 /* RetinaScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetinaScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22DA2862914D0DE004FD3E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22DA2882914D0DE004FD3E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E22DA28A2914D0DE004FD3E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,11 +46,11 @@
 		E22DA28F2914D0DF004FD3E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22DA2922914D0DF004FD3E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E22DA2942914D0DF004FD3E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E22DA2992914D0DF004FD3E9 /* demoRetinaScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demoRetinaScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E22DA29D2914D0DF004FD3E9 /* demoRetinaScanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoRetinaScanTests.swift; sourceTree = "<group>"; };
-		E22DA2A32914D0DF004FD3E9 /* demoRetinaScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demoRetinaScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E22DA2A72914D0DF004FD3E9 /* demoRetinaScanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoRetinaScanUITests.swift; sourceTree = "<group>"; };
-		E22DA2A92914D0DF004FD3E9 /* demoRetinaScanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoRetinaScanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E22DA2992914D0DF004FD3E9 /* RetinaScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetinaScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E22DA29D2914D0DF004FD3E9 /* RetinaScanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetinaScanTests.swift; sourceTree = "<group>"; };
+		E22DA2A32914D0DF004FD3E9 /* RetinaScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetinaScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E22DA2A72914D0DF004FD3E9 /* RetinaScanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetinaScanUITests.swift; sourceTree = "<group>"; };
+		E22DA2A92914D0DF004FD3E9 /* RetinaScanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetinaScanUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E22DA2B62914D115004FD3E9 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		E22DA2B82914D1CE004FD3E9 /* ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSCNViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,9 +83,9 @@
 		E22DA27A2914D0DE004FD3E9 = {
 			isa = PBXGroup;
 			children = (
-				E22DA2852914D0DE004FD3E9 /* demoRetinaScan */,
-				E22DA29C2914D0DF004FD3E9 /* demoRetinaScanTests */,
-				E22DA2A62914D0DF004FD3E9 /* demoRetinaScanUITests */,
+				E22DA2852914D0DE004FD3E9 /* RetinaScan */,
+				E22DA29C2914D0DF004FD3E9 /* RetinaScanTests */,
+				E22DA2A62914D0DF004FD3E9 /* RetinaScanUITests */,
 				E22DA2842914D0DE004FD3E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,14 +93,14 @@
 		E22DA2842914D0DE004FD3E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E22DA2832914D0DE004FD3E9 /* demoRetinaScan.app */,
-				E22DA2992914D0DF004FD3E9 /* demoRetinaScanTests.xctest */,
-				E22DA2A32914D0DF004FD3E9 /* demoRetinaScanUITests.xctest */,
+				E22DA2832914D0DE004FD3E9 /* RetinaScan.app */,
+				E22DA2992914D0DF004FD3E9 /* RetinaScanTests.xctest */,
+				E22DA2A32914D0DF004FD3E9 /* RetinaScanUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E22DA2852914D0DE004FD3E9 /* demoRetinaScan */ = {
+		E22DA2852914D0DE004FD3E9 /* RetinaScan */ = {
 			isa = PBXGroup;
 			children = (
 				E22DA2862914D0DE004FD3E9 /* AppDelegate.swift */,
@@ -113,32 +113,32 @@
 				E22DA2912914D0DF004FD3E9 /* LaunchScreen.storyboard */,
 				E22DA2942914D0DF004FD3E9 /* Info.plist */,
 			);
-			path = demoRetinaScan;
+			path = RetinaScan;
 			sourceTree = "<group>";
 		};
-		E22DA29C2914D0DF004FD3E9 /* demoRetinaScanTests */ = {
+		E22DA29C2914D0DF004FD3E9 /* RetinaScanTests */ = {
 			isa = PBXGroup;
 			children = (
-				E22DA29D2914D0DF004FD3E9 /* demoRetinaScanTests.swift */,
+				E22DA29D2914D0DF004FD3E9 /* RetinaScanTests.swift */,
 			);
-			path = demoRetinaScanTests;
+			path = RetinaScanTests;
 			sourceTree = "<group>";
 		};
-		E22DA2A62914D0DF004FD3E9 /* demoRetinaScanUITests */ = {
+		E22DA2A62914D0DF004FD3E9 /* RetinaScanUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E22DA2A72914D0DF004FD3E9 /* demoRetinaScanUITests.swift */,
-				E22DA2A92914D0DF004FD3E9 /* demoRetinaScanUITestsLaunchTests.swift */,
+				E22DA2A72914D0DF004FD3E9 /* RetinaScanUITests.swift */,
+				E22DA2A92914D0DF004FD3E9 /* RetinaScanUITestsLaunchTests.swift */,
 			);
-			path = demoRetinaScanUITests;
+			path = RetinaScanUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E22DA2822914D0DE004FD3E9 /* demoRetinaScan */ = {
+		E22DA2822914D0DE004FD3E9 /* RetinaScan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E22DA2AD2914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "demoRetinaScan" */;
+			buildConfigurationList = E22DA2AD2914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "RetinaScan" */;
 			buildPhases = (
 				E22DA27F2914D0DE004FD3E9 /* Sources */,
 				E22DA2802914D0DE004FD3E9 /* Frameworks */,
@@ -148,14 +148,14 @@
 			);
 			dependencies = (
 			);
-			name = demoRetinaScan;
+			name = RetinaScan;
 			productName = demoRetinaScan;
-			productReference = E22DA2832914D0DE004FD3E9 /* demoRetinaScan.app */;
+			productReference = E22DA2832914D0DE004FD3E9 /* RetinaScan.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E22DA2982914D0DF004FD3E9 /* demoRetinaScanTests */ = {
+		E22DA2982914D0DF004FD3E9 /* RetinaScanTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E22DA2B02914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "demoRetinaScanTests" */;
+			buildConfigurationList = E22DA2B02914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "RetinaScanTests" */;
 			buildPhases = (
 				E22DA2952914D0DF004FD3E9 /* Sources */,
 				E22DA2962914D0DF004FD3E9 /* Frameworks */,
@@ -166,14 +166,14 @@
 			dependencies = (
 				E22DA29B2914D0DF004FD3E9 /* PBXTargetDependency */,
 			);
-			name = demoRetinaScanTests;
+			name = RetinaScanTests;
 			productName = demoRetinaScanTests;
-			productReference = E22DA2992914D0DF004FD3E9 /* demoRetinaScanTests.xctest */;
+			productReference = E22DA2992914D0DF004FD3E9 /* RetinaScanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E22DA2A22914D0DF004FD3E9 /* demoRetinaScanUITests */ = {
+		E22DA2A22914D0DF004FD3E9 /* RetinaScanUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E22DA2B32914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "demoRetinaScanUITests" */;
+			buildConfigurationList = E22DA2B32914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "RetinaScanUITests" */;
 			buildPhases = (
 				E22DA29F2914D0DF004FD3E9 /* Sources */,
 				E22DA2A02914D0DF004FD3E9 /* Frameworks */,
@@ -184,9 +184,9 @@
 			dependencies = (
 				E22DA2A52914D0DF004FD3E9 /* PBXTargetDependency */,
 			);
-			name = demoRetinaScanUITests;
+			name = RetinaScanUITests;
 			productName = demoRetinaScanUITests;
-			productReference = E22DA2A32914D0DF004FD3E9 /* demoRetinaScanUITests.xctest */;
+			productReference = E22DA2A32914D0DF004FD3E9 /* RetinaScanUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E22DA27E2914D0DE004FD3E9 /* Build configuration list for PBXProject "demoRetinaScan" */;
+			buildConfigurationList = E22DA27E2914D0DE004FD3E9 /* Build configuration list for PBXProject "RetinaScan" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -225,9 +225,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E22DA2822914D0DE004FD3E9 /* demoRetinaScan */,
-				E22DA2982914D0DF004FD3E9 /* demoRetinaScanTests */,
-				E22DA2A22914D0DF004FD3E9 /* demoRetinaScanUITests */,
+				E22DA2822914D0DE004FD3E9 /* RetinaScan */,
+				E22DA2982914D0DF004FD3E9 /* RetinaScanTests */,
+				E22DA2A22914D0DF004FD3E9 /* RetinaScanUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22DA29E2914D0DF004FD3E9 /* demoRetinaScanTests.swift in Sources */,
+				E22DA29E2914D0DF004FD3E9 /* RetinaScanTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22DA2A82914D0DF004FD3E9 /* demoRetinaScanUITests.swift in Sources */,
-				E22DA2AA2914D0DF004FD3E9 /* demoRetinaScanUITestsLaunchTests.swift in Sources */,
+				E22DA2A82914D0DF004FD3E9 /* RetinaScanUITests.swift in Sources */,
+				E22DA2AA2914D0DF004FD3E9 /* RetinaScanUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +294,12 @@
 /* Begin PBXTargetDependency section */
 		E22DA29B2914D0DF004FD3E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E22DA2822914D0DE004FD3E9 /* demoRetinaScan */;
+			target = E22DA2822914D0DE004FD3E9 /* RetinaScan */;
 			targetProxy = E22DA29A2914D0DF004FD3E9 /* PBXContainerItemProxy */;
 		};
 		E22DA2A52914D0DF004FD3E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E22DA2822914D0DE004FD3E9 /* demoRetinaScan */;
+			target = E22DA2822914D0DE004FD3E9 /* RetinaScan */;
 			targetProxy = E22DA2A42914D0DF004FD3E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -445,9 +445,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WJJ3W274Y8;
+				DEVELOPMENT_TEAM = Q8A8KD834Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = demoRetinaScan/Info.plist;
+				INFOPLIST_FILE = RetinaScan/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -460,7 +460,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.RetinaScan.demoRetinaScan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RetinaScan.RetinaScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -475,9 +475,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WJJ3W274Y8;
+				DEVELOPMENT_TEAM = Q8A8KD834Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = demoRetinaScan/Info.plist;
+				INFOPLIST_FILE = RetinaScan/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -490,7 +490,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.RetinaScan.demoRetinaScan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RetinaScan.RetinaScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -514,7 +514,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/demoRetinaScan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/demoRetinaScan";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetinaScan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RetinaScan";
 			};
 			name = Debug;
 		};
@@ -534,7 +534,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/demoRetinaScan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/demoRetinaScan";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetinaScan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RetinaScan";
 			};
 			name = Release;
 		};
@@ -577,7 +577,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E22DA27E2914D0DE004FD3E9 /* Build configuration list for PBXProject "demoRetinaScan" */ = {
+		E22DA27E2914D0DE004FD3E9 /* Build configuration list for PBXProject "RetinaScan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E22DA2AB2914D0DF004FD3E9 /* Debug */,
@@ -586,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E22DA2AD2914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "demoRetinaScan" */ = {
+		E22DA2AD2914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "RetinaScan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E22DA2AE2914D0DF004FD3E9 /* Debug */,
@@ -595,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E22DA2B02914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "demoRetinaScanTests" */ = {
+		E22DA2B02914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "RetinaScanTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E22DA2B12914D0DF004FD3E9 /* Debug */,
@@ -604,7 +604,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E22DA2B32914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "demoRetinaScanUITests" */ = {
+		E22DA2B32914D0DF004FD3E9 /* Build configuration list for PBXNativeTarget "RetinaScanUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E22DA2B42914D0DF004FD3E9 /* Debug */,
