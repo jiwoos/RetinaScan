@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  demoRetinaScan
+//  RetinaScan
 //
 //  Created by Jiwoo Seo on 11/3/22.
 //

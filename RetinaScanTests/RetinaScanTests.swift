@@ -1,6 +1,6 @@
 //
-//  demoRetinaScanTests.swift
-//  demoRetinaScanTests
+//  RetinaScanTests.swift
+//  RetinaScanTests
 //
 //  Created by Jiwoo Seo on 11/3/22.
 //
@@ -8,7 +8,7 @@
 import XCTest
 @testable import demoRetinaScan
 
-final class demoRetinaScanTests: XCTestCase {
+final class RetinaScanTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
