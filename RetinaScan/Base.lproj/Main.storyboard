@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,16 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RetinaScan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SbP-Do-ONo">
-                                <rect key="frame" x="-12" y="-12" width="418" height="864"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbP-Do-ONo">
+                                <rect key="frame" x="0.0" y="-2" width="375" height="864"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CZV-S4-bei">
-                                        <rect key="frame" x="127" y="67" width="165" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CZV-S4-bei">
+                                        <rect key="frame" x="105" y="67" width="165" height="32"/>
                                         <segments>
                                             <segment title="Basic"/>
                                             <segment title="Developer"/>
@@ -32,42 +30,66 @@
                                         </connections>
                                     </segmentedControl>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hN-eN-ik9">
-                                        <rect key="frame" x="79" y="349" width="260" height="167"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="56" y="349" width="260" height="167"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Approx Distance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df2-s9-NCa">
-                                        <rect key="frame" x="118" y="649" width="137" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xxxxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOM-J3-fbJ">
-                                        <rect key="frame" x="252" y="648" width="51" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <arscnView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hY-jG-eP1">
-                                        <rect key="frame" x="118" y="678" width="182" height="144"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <arscnView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hY-jG-eP1">
+                                        <rect key="frame" x="75" y="650" width="225" height="144"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="144" id="ddw-kq-ydU"/>
+                                        </constraints>
                                     </arscnView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gh-RL-Qnq">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gh-RL-Qnq">
                                         <rect key="frame" x="314" y="42" width="53" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="pET-4M-1nH"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" image="photo.artframe" catalog="system"/>
                                         <connections>
                                             <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOQ-hN-GzW"/>
                                         </connections>
                                     </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approx Distance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df2-s9-NCa">
+                                        <rect key="frame" x="75" y="621" width="225" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xxxxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOM-J3-fbJ">
+                                        <rect key="frame" x="212" y="620" width="88" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="8Gh-RL-Qnq" firstAttribute="trailing" secondItem="SbP-Do-ONo" secondAttribute="trailingMargin" id="44d-IG-TdJ"/>
+                                    <constraint firstItem="6hY-jG-eP1" firstAttribute="leading" secondItem="df2-s9-NCa" secondAttribute="trailing" constant="-225" id="BzI-I9-LWZ"/>
+                                    <constraint firstItem="df2-s9-NCa" firstAttribute="centerX" secondItem="SbP-Do-ONo" secondAttribute="centerX" id="DQR-88-0hY"/>
+                                    <constraint firstItem="CZV-S4-bei" firstAttribute="top" secondItem="SbP-Do-ONo" secondAttribute="top" constant="67" id="Jym-Fx-hFA"/>
+                                    <constraint firstItem="8Gh-RL-Qnq" firstAttribute="top" secondItem="SbP-Do-ONo" secondAttribute="top" constant="42" id="KkN-M3-Vuh"/>
+                                    <constraint firstItem="6hY-jG-eP1" firstAttribute="centerX" secondItem="CZV-S4-bei" secondAttribute="centerX" id="PGg-Yw-SeC"/>
+                                    <constraint firstItem="6hY-jG-eP1" firstAttribute="leading" secondItem="df2-s9-NCa" secondAttribute="leading" id="UzH-Gs-BtU"/>
+                                    <constraint firstAttribute="bottom" secondItem="6hY-jG-eP1" secondAttribute="bottom" constant="70" id="aLG-xo-U6p"/>
+                                    <constraint firstAttribute="trailing" secondItem="6hY-jG-eP1" secondAttribute="trailing" constant="75" id="aMe-a3-5fW"/>
+                                    <constraint firstItem="CZV-S4-bei" firstAttribute="centerX" secondItem="SbP-Do-ONo" secondAttribute="centerX" id="c4w-j4-SN2"/>
+                                    <constraint firstItem="6hY-jG-eP1" firstAttribute="top" secondItem="df2-s9-NCa" secondAttribute="bottom" constant="8" id="jd3-7z-9uW"/>
+                                    <constraint firstItem="6hY-jG-eP1" firstAttribute="centerX" secondItem="SbP-Do-ONo" secondAttribute="centerX" id="y4j-bD-c5f"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SbP-Do-ONo" secondAttribute="trailing" id="0pt-WE-3EQ"/>
+                            <constraint firstItem="SbP-Do-ONo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6cc-If-V5D"/>
+                            <constraint firstAttribute="trailing" secondItem="SbP-Do-ONo" secondAttribute="trailing" id="MuH-2N-EmM"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SbP-Do-ONo" secondAttribute="bottom" constant="-84" id="PC9-jo-t9D"/>
+                            <constraint firstItem="SbP-Do-ONo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-49" id="dN4-pm-5gA"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="approxDistText" destination="df2-s9-NCa" id="Aka-BW-O8J"/>
@@ -80,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="130.40000000000001" y="-28.078817733990149"/>
         </scene>
     </scenes>
     <resources>

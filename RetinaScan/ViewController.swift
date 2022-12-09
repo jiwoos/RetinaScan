@@ -87,6 +87,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     func setupSize() {
         width = objectView.frame.width
         height = objectView.frame.height
+        //objectView.center = super.view.center
     }
     
     private func addGesture() {
