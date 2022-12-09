@@ -50,7 +50,7 @@ extension ViewController: ARSCNViewDelegate{
     
     
     
-    // adds the object when face is detected
+    // adds the object when face is detected 
     func addObject() {
         DispatchQueue.main.async {
             self.objectView.isHidden = false

@@ -33,7 +33,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     var setUpDefault = false
     var initDistance = 50.0
 
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         super.viewDidLoad()
         objectView.image = UIImage(named:"foo")
 

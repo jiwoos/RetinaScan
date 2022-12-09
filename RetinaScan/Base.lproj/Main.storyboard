@@ -50,8 +50,8 @@
                                             <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOQ-hN-GzW"/>
                                         </connections>
                                     </button>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxxxxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOM-J3-fbJ">
-                                        <rect key="frame" x="162" y="750.66666666666663" width="51" height="20.333333333333371"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="xxxxxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOM-J3-fbJ">
+                                        <rect key="frame" x="162" y="752.66666666666663" width="51" height="20.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
