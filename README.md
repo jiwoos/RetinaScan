@@ -36,5 +36,9 @@ This app requires iPhone, iPad devices with iOS 16.0.
       
       For Bundle Identifier Error, try changing the unique name for your own. 
       
-2) Your phone may need to be changed to '[developer's mode](https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device)If you'
+2) Your phone may need to be changed to '[developer's mode](https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device)'
+
+   ![image](https://user-images.githubusercontent.com/43775491/206657864-ed589b4c-9579-46ec-aa2b-48c69aed1e45.png)
+
+
 3) If you happen to see any errors, please reach out to jiwooseo@wustl.edu
