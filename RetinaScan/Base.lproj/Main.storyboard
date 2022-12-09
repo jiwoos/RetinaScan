@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbP-Do-ONo">
-                                <rect key="frame" x="0.0" y="-2" width="375" height="864"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CZV-S4-bei">
                                         <rect key="frame" x="105" y="67" width="165" height="32"/>
@@ -30,11 +30,11 @@
                                         </connections>
                                     </segmentedControl>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hN-eN-ik9">
-                                        <rect key="frame" x="56" y="349" width="260" height="167"/>
+                                        <rect key="frame" x="56" y="323" width="260" height="167"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <arscnView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hY-jG-eP1">
-                                        <rect key="frame" x="75" y="650" width="225" height="144"/>
+                                        <rect key="frame" x="75" y="598" width="225" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="144" id="ddw-kq-ydU"/>
                                         </constraints>
@@ -50,15 +50,8 @@
                                             <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOQ-hN-GzW"/>
                                         </connections>
                                     </button>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approx Distance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df2-s9-NCa">
-                                        <rect key="frame" x="75" y="621" width="225" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xxxxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOM-J3-fbJ">
-                                        <rect key="frame" x="212" y="620" width="88" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxxxxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOM-J3-fbJ">
+                                        <rect key="frame" x="162" y="750.66666666666663" width="51" height="20.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -67,16 +60,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="8Gh-RL-Qnq" firstAttribute="trailing" secondItem="SbP-Do-ONo" secondAttribute="trailingMargin" id="44d-IG-TdJ"/>
-                                    <constraint firstItem="6hY-jG-eP1" firstAttribute="leading" secondItem="df2-s9-NCa" secondAttribute="trailing" constant="-225" id="BzI-I9-LWZ"/>
-                                    <constraint firstItem="df2-s9-NCa" firstAttribute="centerX" secondItem="SbP-Do-ONo" secondAttribute="centerX" id="DQR-88-0hY"/>
+                                    <constraint firstAttribute="bottom" secondItem="EOM-J3-fbJ" secondAttribute="bottom" constant="41" id="Bl6-gN-cNn"/>
                                     <constraint firstItem="CZV-S4-bei" firstAttribute="top" secondItem="SbP-Do-ONo" secondAttribute="top" constant="67" id="Jym-Fx-hFA"/>
                                     <constraint firstItem="8Gh-RL-Qnq" firstAttribute="top" secondItem="SbP-Do-ONo" secondAttribute="top" constant="42" id="KkN-M3-Vuh"/>
                                     <constraint firstItem="6hY-jG-eP1" firstAttribute="centerX" secondItem="CZV-S4-bei" secondAttribute="centerX" id="PGg-Yw-SeC"/>
-                                    <constraint firstItem="6hY-jG-eP1" firstAttribute="leading" secondItem="df2-s9-NCa" secondAttribute="leading" id="UzH-Gs-BtU"/>
                                     <constraint firstAttribute="bottom" secondItem="6hY-jG-eP1" secondAttribute="bottom" constant="70" id="aLG-xo-U6p"/>
                                     <constraint firstAttribute="trailing" secondItem="6hY-jG-eP1" secondAttribute="trailing" constant="75" id="aMe-a3-5fW"/>
                                     <constraint firstItem="CZV-S4-bei" firstAttribute="centerX" secondItem="SbP-Do-ONo" secondAttribute="centerX" id="c4w-j4-SN2"/>
-                                    <constraint firstItem="6hY-jG-eP1" firstAttribute="top" secondItem="df2-s9-NCa" secondAttribute="bottom" constant="8" id="jd3-7z-9uW"/>
+                                    <constraint firstItem="EOM-J3-fbJ" firstAttribute="centerX" secondItem="SbP-Do-ONo" secondAttribute="centerX" id="lEf-Ht-chD"/>
                                     <constraint firstItem="6hY-jG-eP1" firstAttribute="centerX" secondItem="SbP-Do-ONo" secondAttribute="centerX" id="y4j-bD-c5f"/>
                                 </constraints>
                             </view>
@@ -85,14 +76,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="SbP-Do-ONo" secondAttribute="trailing" id="0pt-WE-3EQ"/>
+                            <constraint firstItem="SbP-Do-ONo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2yb-qt-KaM"/>
                             <constraint firstItem="SbP-Do-ONo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6cc-If-V5D"/>
+                            <constraint firstItem="SbP-Do-ONo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7lW-KP-AiT"/>
                             <constraint firstAttribute="trailing" secondItem="SbP-Do-ONo" secondAttribute="trailing" id="MuH-2N-EmM"/>
                             <constraint firstAttribute="bottomMargin" secondItem="SbP-Do-ONo" secondAttribute="bottom" constant="-84" id="PC9-jo-t9D"/>
                             <constraint firstItem="SbP-Do-ONo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-49" id="dN4-pm-5gA"/>
+                            <constraint firstAttribute="bottom" secondItem="SbP-Do-ONo" secondAttribute="bottom" id="lzA-bA-MDe"/>
+                            <constraint firstItem="SbP-Do-ONo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pAc-eR-faO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="approxDistText" destination="df2-s9-NCa" id="Aka-BW-O8J"/>
                         <outlet property="distanceLabel" destination="EOM-J3-fbJ" id="saW-5d-43O"/>
                         <outlet property="modeController" destination="CZV-S4-bei" id="pma-S8-vEh"/>
                         <outlet property="objectView" destination="8hN-eN-ik9" id="mgV-5v-jPn"/>

@@ -10,27 +10,23 @@ import CoreGraphics
 import SceneKit
 import ARKit
 
-//--------------------------
-// MARK: - ARSCNViewDelegate
-//--------------------------
-
+// ViewController that takes responsibility in detecting face and tracking the distance between the device and the user's eyes
 extension ViewController: ARSCNViewDelegate{
 
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
 
-        // Setting up the face and eyes
+        // Setting up the face and eye nodes
         faceNode = node
         faceNode.addChildNode(leftEye)
         faceNode.addChildNode(rightEye)
         faceNode.transform = node.transform
 
-        
+        // get the distance and set the object size accordingly
         trackDistance()
         setObjectSize()
     }
 
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-
         faceNode.transform = node.transform
 
         // Check if we have a valid ARFaceAnchor
@@ -41,7 +37,8 @@ extension ViewController: ARSCNViewDelegate{
         } else {
             deleteObject()
         }
-        // Update the Transform of the left and right eyes
+        
+        // Update the Transform of the left and right eyes from the Anchor Transform
         leftEye.simdTransform = faceAnchor.leftEyeTransform
         rightEye.simdTransform = faceAnchor.rightEyeTransform
 
@@ -50,7 +47,10 @@ extension ViewController: ARSCNViewDelegate{
             setObjectSize()
         }
     }
-
+    
+    
+    
+    // adds the object when face is detected
     func addObject() {
         DispatchQueue.main.async {
             self.objectView.isHidden = false
@@ -59,6 +59,9 @@ extension ViewController: ARSCNViewDelegate{
         }
     }
     
+    
+    
+    // deletes the object when face is not detected
     func deleteObject() {
         DispatchQueue.main.async {
             self.uiViewBackground.backgroundColor = UIColor.red
@@ -66,6 +69,9 @@ extension ViewController: ARSCNViewDelegate{
         }
        
     }
+    
+    
+    
     
     // Tracks the distance of the eyes from the camera
     func trackDistance(){
@@ -75,12 +81,12 @@ extension ViewController: ARSCNViewDelegate{
             let leftEyeDistanceFromCamera = self.leftEye.worldPosition - SCNVector3Zero
             let rightEyeDistanceFromCamera = self.rightEye.worldPosition - SCNVector3Zero
 
-            // Calculate the average distance
+            // Calculate the average distance of the eyes to the camera
             let averageDistance = (leftEyeDistanceFromCamera.length() + rightEyeDistanceFromCamera.length()) / 2
             self.self.averageDistanceCM = Double((round(averageDistance * 1000)))
             print("Approximate distance from the camera = \(averageDistanceCM/10)")
             let distanceInStr = String(averageDistanceCM/10) + "mm"
-            self.distanceLabel.text = distanceInStr
+            self.distanceLabel.text = "Approx Distance: " + distanceInStr
             
             if (!self.setUpDefault) {
                 self.initDistance = averageDistanceCM
@@ -89,6 +95,11 @@ extension ViewController: ARSCNViewDelegate{
         }
     }
     
+    
+    
+    
+    
+    // Calculate the size of the object
     func setObjectSize() {
         DispatchQueue.main.async {
             let newWidth = (self.width)*CGFloat(self.averageDistanceCM/self.initDistance)

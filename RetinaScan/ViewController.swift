@@ -9,15 +9,17 @@ import UIKit
 import SceneKit
 import ARKit
 
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+    // Outlets that connect with Storyboard objects
     @IBOutlet weak var objectView: UIImageView!
     @IBOutlet weak var modeController: UISegmentedControl!
     @IBOutlet weak var uiViewBackground: UIView!
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var distanceLabel: UILabel! //displays the distance in cm
-    @IBOutlet weak var approxDistText: UILabel! // just label
     
+    // SCNNode objects for face detection
     var faceNode = SCNNode()
     var leftEye = SCNNode()
     var rightEye = SCNNode()
@@ -30,11 +32,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     var isPinching = false
     var setUpDefault = false
     var initDistance = 50.0
-
-
-    //-----------------------
-    // MARK: - View LifeCycle
-    //-----------------------
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,9 +47,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
 
         
         setupEyeNode()
-        
         setupSize()
-        
         addGesture()
     }
 
@@ -60,10 +55,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         
     }
 
-    //-----------------------
-    // MARK: - Eye Node Setup
-    //-----------------------
-
+    
+    
+    
+    
+    
     // Creates to SCNSpheres to loosely represent the eyes
     func setupEyeNode(){
 
@@ -87,9 +83,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     func setupSize() {
         width = objectView.frame.width
         height = objectView.frame.height
-        //objectView.center = super.view.center
     }
     
+    
+    
+    
+    
+    
+    // Functionality to zoom/pinch the object (snellen eye chart)
     private func addGesture() {
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(didPinch(_:)))
         objectView.isUserInteractionEnabled = true
@@ -111,22 +112,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         }
     }
 
+    
+    
+    
+    
+    // Toggle button to switch between Basic/Developer mode
     @IBAction func modeChanged(_ sender: Any) {
         switch modeController.selectedSegmentIndex
             {
             case 0:
                 sceneView.isHidden = true
                 distanceLabel.isHidden = true
-                approxDistText.isHidden = true
             case 1:
                 sceneView.isHidden = false
                 distanceLabel.isHidden = false
-                approxDistText.isHidden = false
             default:
                 break
             }
     }
     
+    
+    
+    
+    
+    // Button to open image from the Photos Gallery
     @IBAction func chooseImage(_ sender: Any) {
         let imgPickerCtrl = UIImagePickerController()
         imgPickerCtrl.delegate = self
