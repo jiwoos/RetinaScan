@@ -54,6 +54,7 @@ extension ViewController: ARSCNViewDelegate{
     func addObject() {
         DispatchQueue.main.async {
             self.objectView.isHidden = false
+            self.uiViewBackground.center = super.view.center
             self.uiViewBackground.backgroundColor = UIColor.lightGray
         }
     }
@@ -76,9 +77,9 @@ extension ViewController: ARSCNViewDelegate{
 
             // Calculate the average distance
             let averageDistance = (leftEyeDistanceFromCamera.length() + rightEyeDistanceFromCamera.length()) / 2
-            self.self.averageDistanceCM = Double((round(averageDistance * 100)))
-            print("Approximate distance from the camera = \(averageDistanceCM)")
-            let distanceInStr = String(averageDistanceCM) + "cm"
+            self.self.averageDistanceCM = Double((round(averageDistance * 1000)))
+            print("Approximate distance from the camera = \(averageDistanceCM/10)")
+            let distanceInStr = String(averageDistanceCM/10) + "mm"
             self.distanceLabel.text = distanceInStr
             
             if (!self.setUpDefault) {
@@ -92,10 +93,9 @@ extension ViewController: ARSCNViewDelegate{
         DispatchQueue.main.async {
             let newWidth = (self.width)*CGFloat(self.averageDistanceCM/self.initDistance)
             let newHeight = (self.height)*CGFloat(self.averageDistanceCM/self.initDistance)
-            print("height = \(newHeight)")
-            print("width = \(newWidth)")
             self.objectView.frame = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
             self.objectView.center = self.view.center
+
         }
     }
     
